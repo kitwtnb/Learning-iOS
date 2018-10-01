@@ -83,9 +83,8 @@
                                     <segue destination="eos-Xd-vuf" kind="presentation" id="Z5N-6K-84v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okb-8e-ocu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okb-8e-ocu">
                                 <rect key="frame" x="121" y="258" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Present as Popover"/>
                                 <connections>
                                     <segue destination="kCE-Hg-m5E" kind="popoverPresentation" popoverAnchorView="Okb-8e-ocu" id="roH-xL-krG">
@@ -96,7 +95,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Okb-8e-ocu" firstAttribute="top" secondItem="ZC4-t7-D8l" secondAttribute="bottom" constant="28" id="2gR-kw-vyX"/>
                             <constraint firstItem="Ryi-Sg-G16" firstAttribute="bottom" secondItem="dTh-jT-dG5" secondAttribute="bottom" constant="596" id="7YP-3W-2d5"/>
+                            <constraint firstItem="Okb-8e-ocu" firstAttribute="centerX" secondItem="02e-Ma-LXE" secondAttribute="centerX" id="81J-nW-C44"/>
                             <constraint firstItem="dTh-jT-dG5" firstAttribute="centerX" secondItem="02e-Ma-LXE" secondAttribute="centerX" id="FCE-tL-kT3"/>
                             <constraint firstItem="edx-am-0EW" firstAttribute="top" secondItem="Ryi-Sg-G16" secondAttribute="top" constant="26" id="IqH-pS-aGy"/>
                             <constraint firstItem="ZC4-t7-D8l" firstAttribute="top" secondItem="dTh-jT-dG5" secondAttribute="bottom" constant="18" id="TR2-3U-zYa"/>
