@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		23096F7D21610AC200560CAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23096F7C21610AC200560CAF /* AppDelegate.swift */; };
-		23096F7F21610AC200560CAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23096F7E21610AC200560CAF /* ViewController.swift */; };
+		23096F7F21610AC200560CAF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23096F7E21610AC200560CAF /* MainViewController.swift */; };
 		23096F8221610AC200560CAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23096F8021610AC200560CAF /* Main.storyboard */; };
 		23096F8421610AC600560CAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23096F8321610AC600560CAF /* Assets.xcassets */; };
 		23096F8721610AC600560CAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23096F8521610AC600560CAF /* LaunchScreen.storyboard */; };
 		23096F9221610AC600560CAF /* Learning_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23096F9121610AC600560CAF /* Learning_iOSTests.swift */; };
 		23096F9D21610AC600560CAF /* Learning_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23096F9C21610AC600560CAF /* Learning_iOSUITests.swift */; };
+		23096FAD21625D1A00560CAF /* SceneChangeSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23096FAC21625D1A00560CAF /* SceneChangeSampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		23096F7921610AC200560CAF /* Learning-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23096F7C21610AC200560CAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23096F7E21610AC200560CAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23096F7E21610AC200560CAF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		23096F8121610AC200560CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23096F8321610AC600560CAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23096F8621610AC600560CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		23096F9821610AC600560CAF /* Learning-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Learning-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23096F9C21610AC600560CAF /* Learning_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning_iOSUITests.swift; sourceTree = "<group>"; };
 		23096F9E21610AC600560CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23096FAC21625D1A00560CAF /* SceneChangeSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneChangeSampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				23096F7C21610AC200560CAF /* AppDelegate.swift */,
-				23096F7E21610AC200560CAF /* ViewController.swift */,
+				23096F7E21610AC200560CAF /* MainViewController.swift */,
 				23096F8021610AC200560CAF /* Main.storyboard */,
 				23096F8321610AC600560CAF /* Assets.xcassets */,
 				23096F8521610AC600560CAF /* LaunchScreen.storyboard */,
 				23096F8821610AC600560CAF /* Info.plist */,
+				23096FAC21625D1A00560CAF /* SceneChangeSampleViewController.swift */,
 			);
 			path = "Learning-iOS";
 			sourceTree = "<group>";
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23096F7F21610AC200560CAF /* ViewController.swift in Sources */,
+				23096F7F21610AC200560CAF /* MainViewController.swift in Sources */,
+				23096FAD21625D1A00560CAF /* SceneChangeSampleViewController.swift in Sources */,
 				23096F7D21610AC200560CAF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
