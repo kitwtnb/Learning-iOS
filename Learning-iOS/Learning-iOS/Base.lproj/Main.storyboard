@@ -18,16 +18,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iy-sJ-O5b">
-                                <rect key="frame" x="112" y="391" width="151" height="30"/>
+                                <rect key="frame" x="112" y="155" width="151" height="30"/>
                                 <state key="normal" title="Scene change sample"/>
                                 <connections>
                                     <segue destination="O1j-AH-UGu" kind="show" id="Guy-Me-qMH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1q-x8-IWU">
+                                <rect key="frame" x="133" y="207" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Counter sample"/>
+                                <connections>
+                                    <segue destination="CoN-en-nKn" kind="show" id="vYg-lh-afV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2iy-sJ-O5b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e7d-Wq-0u6"/>
+                            <constraint firstItem="2iy-sJ-O5b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-236" id="e7d-Wq-0u6"/>
                             <constraint firstItem="2iy-sJ-O5b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n0n-6e-i3k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -129,6 +137,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ez-tm-wtf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2516" y="-10"/>
+        </scene>
+        <!--Counter Sample View Controller-->
+        <scene sceneID="FH8-sC-UhC">
+            <objects>
+                <viewController id="CoN-en-nKn" customClass="CounterSampleViewController" customModule="Learning_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m78-hx-cmL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP2-s6-lmO">
+                                <rect key="frame" x="166" y="317" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8d-nh-GW8">
+                                <rect key="frame" x="158" y="346" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="push me"/>
+                                <connections>
+                                    <action selector="countUp:" destination="CoN-en-nKn" eventType="touchUpInside" id="Dbn-aR-w89"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="keq-q5-FuX"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="JP2-s6-lmO" id="Yfe-bz-F0s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Doh-iB-UlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="857"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WVp-47-o6e">
