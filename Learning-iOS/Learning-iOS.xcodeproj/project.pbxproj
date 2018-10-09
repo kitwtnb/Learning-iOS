@@ -16,6 +16,8 @@
 		23096F9D21610AC600560CAF /* Learning_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23096F9C21610AC600560CAF /* Learning_iOSUITests.swift */; };
 		23096FAD21625D1A00560CAF /* SceneChangeSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23096FAC21625D1A00560CAF /* SceneChangeSampleViewController.swift */; };
 		239DA0522164F45600A4E7FD /* CounterSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DA0512164F45600A4E7FD /* CounterSampleViewController.swift */; };
+		239DA0542166D99D00A4E7FD /* NavigationWithParameterSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DA0532166D99D00A4E7FD /* NavigationWithParameterSampleViewController.swift */; };
+		239DA0562166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DA0552166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		23096F9E21610AC600560CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23096FAC21625D1A00560CAF /* SceneChangeSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneChangeSampleViewController.swift; sourceTree = "<group>"; };
 		239DA0512164F45600A4E7FD /* CounterSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterSampleViewController.swift; sourceTree = "<group>"; };
+		239DA0532166D99D00A4E7FD /* NavigationWithParameterSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationWithParameterSampleViewController.swift; sourceTree = "<group>"; };
+		239DA0552166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveParameterSampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				23096F8821610AC600560CAF /* Info.plist */,
 				23096FAC21625D1A00560CAF /* SceneChangeSampleViewController.swift */,
 				239DA0512164F45600A4E7FD /* CounterSampleViewController.swift */,
+				239DA0532166D99D00A4E7FD /* NavigationWithParameterSampleViewController.swift */,
+				239DA0552166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift */,
 			);
 			path = "Learning-iOS";
 			sourceTree = "<group>";
@@ -265,6 +271,8 @@
 				23096F7F21610AC200560CAF /* MainViewController.swift in Sources */,
 				23096FAD21625D1A00560CAF /* SceneChangeSampleViewController.swift in Sources */,
 				23096F7D21610AC200560CAF /* AppDelegate.swift in Sources */,
+				239DA0542166D99D00A4E7FD /* NavigationWithParameterSampleViewController.swift in Sources */,
+				239DA0562166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift in Sources */,
 				239DA0522164F45600A4E7FD /* CounterSampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
