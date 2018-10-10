@@ -36,6 +36,8 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>use camera</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>add camera roll</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>use camera roll</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>

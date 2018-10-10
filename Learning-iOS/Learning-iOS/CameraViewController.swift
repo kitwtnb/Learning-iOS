@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class CameraViewController: UIViewController/* , AVCapturePhotoCaptureDelegate */ {
+class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     @IBOutlet weak var cameraView: UIView!
 
     var captureSession: AVCaptureSession!
@@ -55,5 +55,21 @@ class CameraViewController: UIViewController/* , AVCapturePhotoCaptureDelegate *
     }
     
     @IBAction func tapCapture(_ sender: Any) {
+        let settingForMonitoring = AVCapturePhotoSettings()
+        settingForMonitoring.flashMode = .auto
+        settingForMonitoring.isAutoStillImageStabilizationEnabled = true
+        settingForMonitoring.isHighResolutionPhotoEnabled = false
+
+        stillImageOutput.capturePhoto(with: settingForMonitoring, delegate: self)
+    }
+
+    func photoOutput(_ output: AVCapturePhotoOutput,
+                     didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        // AVCapturePhotoOutput.jpegPhotoDataRepresentation deprecated in iOS11
+        let imageData = photo.fileDataRepresentation()
+
+        let photo = UIImage(data: imageData!)
+        // アルバムに追加.
+        UIImageWriteToSavedPhotosAlbum(photo!, self, nil, nil)
     }
 }
