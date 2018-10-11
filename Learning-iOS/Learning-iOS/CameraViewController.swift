@@ -11,44 +11,30 @@ import AVFoundation
 
 class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     @IBOutlet weak var cameraView: UIView!
-
-    var captureSession: AVCaptureSession!
-    var stillImageOutput: AVCapturePhotoOutput!
-    var previewLayer: AVCaptureVideoPreviewLayer!
     
+    let output = AVCapturePhotoOutput()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        captureSession = AVCaptureSession()
-        stillImageOutput = AVCapturePhotoOutput()
-
-        captureSession.sessionPreset = AVCaptureSession.Preset.hd1920x1080
-
-        let device = AVCaptureDevice.default(for: AVMediaType.video)
-
+        
         do {
-            guard let device = device else { return }
+            guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
+                print("do not get device")
+                return
+            }
+
             let input = try AVCaptureDeviceInput(device: device)
-            if !captureSession.canAddInput(input) {
-                return
-            }
-            captureSession.addInput(input)
-
-            if !captureSession.canAddOutput(stillImageOutput) {
-                return
-            }
-            captureSession.addOutput(stillImageOutput)
-
-            captureSession.startRunning()
-
-            previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-            previewLayer.videoGravity = AVLayerVideoGravity.resizeAspect
-            previewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-
-            cameraView.layer.addSublayer(previewLayer)
-
-            previewLayer.position = CGPoint(x: cameraView.frame.width / 2, y: cameraView.frame.height / 2)
-            previewLayer.bounds = cameraView.frame
+            
+            let session = AVCaptureSession()
+            session.addInput(input)
+            session.addOutput(output)
+            session.sessionPreset = .photo
+            
+            let previewLayer = AVCaptureVideoPreviewLayer(session: session)
+            previewLayer.frame = view.bounds
+            view.layer.addSublayer(previewLayer)
+            
+            session.startRunning()
         } catch {
             print(error)
         }
@@ -60,16 +46,12 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         settingForMonitoring.isAutoStillImageStabilizationEnabled = true
         settingForMonitoring.isHighResolutionPhotoEnabled = false
 
-        stillImageOutput.capturePhoto(with: settingForMonitoring, delegate: self)
+        output.capturePhoto(with: settingForMonitoring, delegate: self)
     }
 
-    func photoOutput(_ output: AVCapturePhotoOutput,
-                     didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        // AVCapturePhotoOutput.jpegPhotoDataRepresentation deprecated in iOS11
-        let imageData = photo.fileDataRepresentation()
-
-        let photo = UIImage(data: imageData!)
-        // アルバムに追加.
-        UIImageWriteToSavedPhotosAlbum(photo!, self, nil, nil)
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        let imageData = photo.fileDataRepresentation()!
+        let photo = UIImage(data: imageData)!
+        UIImageWriteToSavedPhotosAlbum(photo, self, nil, nil)
     }
 }
