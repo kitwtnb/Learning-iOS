@@ -24,14 +24,14 @@
                                     <segue destination="O1j-AH-UGu" kind="show" id="Guy-Me-qMH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1q-x8-IWU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1q-x8-IWU">
                                 <rect key="frame" x="133" y="207" width="109" height="30"/>
                                 <state key="normal" title="Counter sample"/>
                                 <connections>
                                     <segue destination="CoN-en-nKn" kind="show" id="vYg-lh-afV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-Ke-V2A">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-Ke-V2A">
                                 <rect key="frame" x="70" y="271" width="234" height="30"/>
                                 <state key="normal" title="Navigation with parameter sample"/>
                                 <connections>
@@ -55,7 +55,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VWV-ae-FFu" firstAttribute="centerX" secondItem="S1q-x8-IWU" secondAttribute="centerX" id="NfT-0e-fe0"/>
+                            <constraint firstItem="TWQ-Ke-V2A" firstAttribute="top" secondItem="S1q-x8-IWU" secondAttribute="bottom" constant="34" id="5lv-UG-ca9"/>
                             <constraint firstItem="VWV-ae-FFu" firstAttribute="centerX" secondItem="GR1-oQ-Mov" secondAttribute="centerX" id="QkM-G3-3ci"/>
                             <constraint firstItem="2iy-sJ-O5b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-236" id="e7d-Wq-0u6"/>
                             <constraint firstItem="VWV-ae-FFu" firstAttribute="centerX" secondItem="2iy-sJ-O5b" secondAttribute="centerX" id="jq0-Si-84R"/>
@@ -63,6 +63,8 @@
                             <constraint firstItem="2iy-sJ-O5b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n0n-6e-i3k"/>
                             <constraint firstItem="VWV-ae-FFu" firstAttribute="centerX" secondItem="TWQ-Ke-V2A" secondAttribute="centerX" id="sru-Wc-HnF"/>
                             <constraint firstItem="VWV-ae-FFu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="vYC-YS-6YL"/>
+                            <constraint firstItem="S1q-x8-IWU" firstAttribute="centerX" secondItem="2iy-sJ-O5b" secondAttribute="centerX" id="vcQ-Cy-Jn2"/>
+                            <constraint firstItem="S1q-x8-IWU" firstAttribute="top" secondItem="2iy-sJ-O5b" secondAttribute="bottom" constant="22" id="xP9-sd-GDR"/>
                             <constraint firstItem="VWV-ae-FFu" firstAttribute="top" secondItem="GR1-oQ-Mov" secondAttribute="bottom" constant="20" id="z2n-dX-OZs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
