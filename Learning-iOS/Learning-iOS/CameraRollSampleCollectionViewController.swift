@@ -27,7 +27,10 @@ class CameraRollSampleCollectionViewController: UICollectionViewController {
                     
                     self.photoAssets.append(asset)
                 })
-                self.collectionView.reloadData()
+                
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             }
         })
     }
