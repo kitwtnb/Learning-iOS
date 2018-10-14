@@ -20,6 +20,7 @@
 		239DA0562166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DA0552166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift */; };
 		239DA058216E305A00A4E7FD /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DA057216E305A00A4E7FD /* CameraViewController.swift */; };
 		239DA05A2172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DA0592172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift */; };
+		23A3412A217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		239DA0552166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveParameterSampleViewController.swift; sourceTree = "<group>"; };
 		239DA057216E305A00A4E7FD /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		239DA0592172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRollSampleCollectionViewController.swift; sourceTree = "<group>"; };
+		23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRollSampleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				239DA0552166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift */,
 				239DA057216E305A00A4E7FD /* CameraViewController.swift */,
 				239DA0592172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift */,
+				23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */,
 			);
 			path = "Learning-iOS";
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				23096FAD21625D1A00560CAF /* SceneChangeSampleViewController.swift in Sources */,
 				23096F7D21610AC200560CAF /* AppDelegate.swift in Sources */,
 				239DA0542166D99D00A4E7FD /* NavigationWithParameterSampleViewController.swift in Sources */,
+				23A3412A217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift in Sources */,
 				239DA058216E305A00A4E7FD /* CameraViewController.swift in Sources */,
 				239DA0562166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift in Sources */,
 				239DA0522164F45600A4E7FD /* CounterSampleViewController.swift in Sources */,

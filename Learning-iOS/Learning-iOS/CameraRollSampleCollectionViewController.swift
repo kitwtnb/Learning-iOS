@@ -16,8 +16,6 @@ class CameraRollSampleCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         PHPhotoLibrary.requestAuthorization({ [weak self] status in
             guard let self = self else { return }
@@ -39,10 +37,8 @@ class CameraRollSampleCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-        cell.backgroundColor = UIColor.blue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CameraRollSampleCollectionViewCell
+        cell.setImage(photoAssets[indexPath.row])
     
         return cell
     }

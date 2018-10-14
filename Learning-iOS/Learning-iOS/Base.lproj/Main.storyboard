@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-Ke-V2A">
-                                <rect key="frame" x="70" y="271" width="234" height="30"/>
+                                <rect key="frame" x="70.666666666666686" y="271" width="234" height="30"/>
                                 <state key="normal" title="Navigation with parameter sample"/>
                                 <connections>
                                     <segue destination="JDY-zm-abI" kind="show" id="B6m-v2-lM8"/>
@@ -217,13 +217,27 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sVH-dD-grO">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="sVH-dD-grO" customClass="CameraRollSampleCollectionViewCell" customModule="Learning_iOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1BK-CT-1tB">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1BK-CT-1tB" secondAttribute="bottom" id="6cV-PK-dAW"/>
+                                    <constraint firstItem="1BK-CT-1tB" firstAttribute="top" secondItem="sVH-dD-grO" secondAttribute="top" id="6it-dp-DPc"/>
+                                    <constraint firstItem="1BK-CT-1tB" firstAttribute="leading" secondItem="sVH-dD-grO" secondAttribute="leading" id="hNf-ib-sxT"/>
+                                    <constraint firstAttribute="trailing" secondItem="1BK-CT-1tB" secondAttribute="trailing" id="vvs-yI-RbP"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="1BK-CT-1tB" id="qz7-h1-hKR"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -234,7 +248,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bL-Yo-hsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734" y="2977"/>
+            <point key="canvasLocation" x="1733.5999999999999" y="2975.615763546798"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="vuf-UW-FFO">
