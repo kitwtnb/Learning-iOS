@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="1734" y="857"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Camera Roll Sample Collection View Controller-->
         <scene sceneID="LG3-Uh-Ucf">
             <objects>
-                <collectionViewController id="yjn-Rv-urD" sceneMemberID="viewController">
+                <collectionViewController id="yjn-Rv-urD" customClass="CameraRollSampleCollectionViewController" customModule="Learning_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="1nG-cG-IeZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
