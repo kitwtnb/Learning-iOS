@@ -24,35 +24,46 @@
                                     <segue destination="O1j-AH-UGu" kind="show" id="Guy-Me-qMH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1q-x8-IWU">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1q-x8-IWU">
                                 <rect key="frame" x="133" y="207" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Counter sample"/>
                                 <connections>
                                     <segue destination="CoN-en-nKn" kind="show" id="vYg-lh-afV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-Ke-V2A">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-Ke-V2A">
                                 <rect key="frame" x="70" y="271" width="234" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Navigation with parameter sample"/>
                                 <connections>
                                     <segue destination="JDY-zm-abI" kind="show" id="B6m-v2-lM8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR1-oQ-Mov">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR1-oQ-Mov">
                                 <rect key="frame" x="134" y="327" width="107" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera sample"/>
                                 <connections>
                                     <segue destination="vUw-um-Wpt" kind="show" id="f21-tZ-lqI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWV-ae-FFu">
+                                <rect key="frame" x="121" y="377" width="132" height="30"/>
+                                <state key="normal" title="Camera roll sample"/>
+                                <connections>
+                                    <segue destination="yjn-Rv-urD" kind="show" id="z5O-qm-fvN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="VWV-ae-FFu" firstAttribute="centerX" secondItem="S1q-x8-IWU" secondAttribute="centerX" id="NfT-0e-fe0"/>
+                            <constraint firstItem="VWV-ae-FFu" firstAttribute="centerX" secondItem="GR1-oQ-Mov" secondAttribute="centerX" id="QkM-G3-3ci"/>
                             <constraint firstItem="2iy-sJ-O5b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-236" id="e7d-Wq-0u6"/>
+                            <constraint firstItem="VWV-ae-FFu" firstAttribute="centerX" secondItem="2iy-sJ-O5b" secondAttribute="centerX" id="jq0-Si-84R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VWV-ae-FFu" secondAttribute="bottom" constant="371" id="ltN-TR-a2g"/>
                             <constraint firstItem="2iy-sJ-O5b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n0n-6e-i3k"/>
+                            <constraint firstItem="VWV-ae-FFu" firstAttribute="centerX" secondItem="TWQ-Ke-V2A" secondAttribute="centerX" id="sru-Wc-HnF"/>
+                            <constraint firstItem="VWV-ae-FFu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="vYC-YS-6YL"/>
+                            <constraint firstItem="VWV-ae-FFu" firstAttribute="top" secondItem="GR1-oQ-Mov" secondAttribute="bottom" constant="20" id="z2n-dX-OZs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -188,6 +199,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Doh-iB-UlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1734" y="857"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="LG3-Uh-Ucf">
+            <objects>
+                <collectionViewController id="yjn-Rv-urD" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="1nG-cG-IeZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n0w-4b-lGE">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sVH-dD-grO">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="yjn-Rv-urD" id="2Tf-VM-wef"/>
+                            <outlet property="delegate" destination="yjn-Rv-urD" id="ToP-Zd-ZgT"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bL-Yo-hsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="2977"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="vuf-UW-FFO">
