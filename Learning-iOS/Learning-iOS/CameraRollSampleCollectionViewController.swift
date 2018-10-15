@@ -13,6 +13,7 @@ private let reuseIdentifier = "Cell"
 
 class CameraRollSampleCollectionViewController: UICollectionViewController {
     var photoAssets: Array = [PHAsset]()
+    var giveAsset: PHAsset? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,5 +45,16 @@ class CameraRollSampleCollectionViewController: UICollectionViewController {
         cell.setImage(photoAssets[indexPath.row])
     
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        giveAsset = photoAssets[indexPath.row]
+        
+        performSegue(withIdentifier: "Segue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController = segue.destination as! ImageViewController
+        viewController.asset = giveAsset
     }
 }
