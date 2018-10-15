@@ -23,6 +23,9 @@
 		23A3412A217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */; };
 		23A3412C217400A5009A0ACB /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3412B217400A5009A0ACB /* ImageViewController.swift */; };
 		7FAAF878217471DB00089418 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF877217471DB00089418 /* ApiClient.swift */; };
+		7FAAF87A21748C1800089418 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87921748C1800089418 /* Contributor.swift */; };
+		7FAAF87C2174947200089418 /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87B2174947200089418 /* GithubApi.swift */; };
+		7FAAF87E217495CF00089418 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87D217495CF00089418 /* AppError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRollSampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		23A3412B217400A5009A0ACB /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		7FAAF877217471DB00089418 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		7FAAF87921748C1800089418 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
+		7FAAF87B2174947200089418 /* GithubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApi.swift; sourceTree = "<group>"; };
+		7FAAF87D217495CF00089418 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				7FAAF877217471DB00089418 /* ApiClient.swift */,
+				7FAAF87921748C1800089418 /* Contributor.swift */,
+				7FAAF87B2174947200089418 /* GithubApi.swift */,
+				7FAAF87D217495CF00089418 /* AppError.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -295,9 +304,12 @@
 				239DA05A2172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift in Sources */,
 				23096F7F21610AC200560CAF /* MainViewController.swift in Sources */,
 				23A3412C217400A5009A0ACB /* ImageViewController.swift in Sources */,
+				7FAAF87C2174947200089418 /* GithubApi.swift in Sources */,
 				23096FAD21625D1A00560CAF /* SceneChangeSampleViewController.swift in Sources */,
 				23096F7D21610AC200560CAF /* AppDelegate.swift in Sources */,
 				239DA0542166D99D00A4E7FD /* NavigationWithParameterSampleViewController.swift in Sources */,
+				7FAAF87A21748C1800089418 /* Contributor.swift in Sources */,
+				7FAAF87E217495CF00089418 /* AppError.swift in Sources */,
 				23A3412A217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift in Sources */,
 				239DA058216E305A00A4E7FD /* CameraViewController.swift in Sources */,
 				239DA0562166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift in Sources */,

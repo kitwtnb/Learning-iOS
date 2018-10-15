@@ -8,19 +8,12 @@
 
 import Foundation
 
-enum ApiClientError : Error {
-    case invalidUrl
-    case invalidQueryParameter
-    case fail(statusCode: Int)
-    case fail(description: String)
-}
-
 protocol ApiClient {
-    func get(url: String, queries: [String : String]?, response: @escaping (Data?, ApiClientError?) -> Void)
+    func get(url: String, queries: [String : String]?, response: @escaping (Data?, AppError?) -> Void)
 }
 
 struct ApiClientImpl: ApiClient {
-    func get(url urlString: String, queries: [String : String]?, response: @escaping (Data?, ApiClientError?) -> Void) {
+    func get(url urlString: String, queries: [String : String]?, response: @escaping (Data?, AppError?) -> Void) {
         guard var components = URLComponents(string: urlString) else {
             response(nil, .invalidUrl)
             return
@@ -33,12 +26,12 @@ struct ApiClientImpl: ApiClient {
         }
         
         URLSession.shared.dataTask(with: url) { (data, res, error) in
-            if let error = error {
-                let err: ApiClientError
+            guard let data = data else {
+                let err: AppError
                 if let res = res {
                     err = .fail(statusCode: (res as! HTTPURLResponse).statusCode)
                 } else {
-                    err = .fail(description: error.localizedDescription)
+                    err = .fail(description: error!.localizedDescription)
                 }
                 response(nil, err)
                 
