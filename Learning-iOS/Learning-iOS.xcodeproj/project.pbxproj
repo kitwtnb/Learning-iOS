@@ -22,6 +22,7 @@
 		239DA05A2172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DA0592172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift */; };
 		23A3412A217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */; };
 		23A3412C217400A5009A0ACB /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3412B217400A5009A0ACB /* ImageViewController.swift */; };
+		7FAAF878217471DB00089418 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF877217471DB00089418 /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		239DA0592172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRollSampleCollectionViewController.swift; sourceTree = "<group>"; };
 		23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRollSampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		23A3412B217400A5009A0ACB /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		7FAAF877217471DB00089418 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		23096F7B21610AC200560CAF /* Learning-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				7FAAF876217471C100089418 /* model */,
 				23096F7C21610AC200560CAF /* AppDelegate.swift */,
 				23096F7E21610AC200560CAF /* MainViewController.swift */,
 				23096F8021610AC200560CAF /* Main.storyboard */,
@@ -147,6 +150,14 @@
 				23096F9E21610AC600560CAF /* Info.plist */,
 			);
 			path = "Learning-iOSUITests";
+			sourceTree = "<group>";
+		};
+		7FAAF876217471C100089418 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7FAAF877217471DB00089418 /* ApiClient.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FAAF878217471DB00089418 /* ApiClient.swift in Sources */,
 				239DA05A2172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift in Sources */,
 				23096F7F21610AC200560CAF /* MainViewController.swift in Sources */,
 				23A3412C217400A5009A0ACB /* ImageViewController.swift in Sources */,
