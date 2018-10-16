@@ -30,6 +30,7 @@
 		7FAAF8822175ABCC00089418 /* WebApiAccessSampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8812175ABCC00089418 /* WebApiAccessSampleTableViewController.swift */; };
 		7FAAF8842175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */; };
 		7FAAF8862175B11200089418 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8852175B11200089418 /* Dependency.swift */; };
+		7FAAF8892175BE8A00089418 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8882175BE8A00089418 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		7FAAF8812175ABCC00089418 /* WebApiAccessSampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewController.swift; sourceTree = "<group>"; };
 		7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewCell.swift; sourceTree = "<group>"; };
 		7FAAF8852175B11200089418 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		7FAAF8882175BE8A00089418 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		23096F7B21610AC200560CAF /* Learning-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				7FAAF8872175BE7600089418 /* extension */,
 				7FAAF876217471C100089418 /* model */,
 				23096F7C21610AC200560CAF /* AppDelegate.swift */,
 				23096F7E21610AC200560CAF /* MainViewController.swift */,
@@ -179,6 +182,14 @@
 				7FAAF87F21757D2C00089418 /* GithubRepository.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		7FAAF8872175BE7600089418 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				7FAAF8882175BE8A00089418 /* UIImageViewExtension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +326,7 @@
 				7FAAF878217471DB00089418 /* ApiClient.swift in Sources */,
 				239DA05A2172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift in Sources */,
 				23096F7F21610AC200560CAF /* MainViewController.swift in Sources */,
+				7FAAF8892175BE8A00089418 /* UIImageViewExtension.swift in Sources */,
 				23A3412C217400A5009A0ACB /* ImageViewController.swift in Sources */,
 				7FAAF87C2174947200089418 /* GithubApi.swift in Sources */,
 				23096FAD21625D1A00560CAF /* SceneChangeSampleViewController.swift in Sources */,

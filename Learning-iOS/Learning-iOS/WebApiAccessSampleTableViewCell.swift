@@ -9,16 +9,11 @@
 import UIKit
 
 class WebApiAccessSampleTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    
+    func set(contributor: Contributor) {
+        icon.setImage(url: contributor.avatarUrl)
+        name.text = contributor.login
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
