@@ -29,6 +29,7 @@
 		7FAAF88021757D2C00089418 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87F21757D2C00089418 /* GithubRepository.swift */; };
 		7FAAF8822175ABCC00089418 /* WebApiAccessSampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8812175ABCC00089418 /* WebApiAccessSampleTableViewController.swift */; };
 		7FAAF8842175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */; };
+		7FAAF8862175B11200089418 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8852175B11200089418 /* Dependency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		7FAAF87F21757D2C00089418 /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
 		7FAAF8812175ABCC00089418 /* WebApiAccessSampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewController.swift; sourceTree = "<group>"; };
 		7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewCell.swift; sourceTree = "<group>"; };
+		7FAAF8852175B11200089418 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				23A3412B217400A5009A0ACB /* ImageViewController.swift */,
 				7FAAF8812175ABCC00089418 /* WebApiAccessSampleTableViewController.swift */,
 				7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */,
+				7FAAF8852175B11200089418 /* Dependency.swift */,
 			);
 			path = "Learning-iOS";
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				7FAAF8822175ABCC00089418 /* WebApiAccessSampleTableViewController.swift in Sources */,
 				7FAAF87E217495CF00089418 /* AppError.swift in Sources */,
 				7FAAF8842175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift in Sources */,
+				7FAAF8862175B11200089418 /* Dependency.swift in Sources */,
 				23A3412A217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift in Sources */,
 				239DA058216E305A00A4E7FD /* CameraViewController.swift in Sources */,
 				7FAAF88021757D2C00089418 /* GithubRepository.swift in Sources */,
