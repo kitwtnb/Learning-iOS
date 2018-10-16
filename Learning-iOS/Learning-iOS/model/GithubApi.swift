@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct GithubApi {
+protocol GithubApi {
+    func fetchContributors(owner: String, repo: String, handler: @escaping (Array<Contributor>?, AppError?) -> Void)
+}
+
+struct GithubApiImpl : GithubApi {
     private static let baseUrl = "https://api.github.com"
     
     private let apiClient: ApiClient
@@ -18,7 +22,7 @@ struct GithubApi {
     }
     
     func fetchContributors(owner: String, repo: String, handler: @escaping (Array<Contributor>?, AppError?) -> Void) {
-        let url = String(format: GithubApi.baseUrl + "/repos/%@/%@/contributors", owner, repo)
+        let url = String(format: GithubApiImpl.baseUrl + "/repos/%@/%@/contributors", owner, repo)
         
         apiClient.get(url: url, queries: nil) { (data, error) in
             guard let data = data else {
