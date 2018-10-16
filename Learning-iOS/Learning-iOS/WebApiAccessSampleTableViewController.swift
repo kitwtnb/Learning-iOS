@@ -16,20 +16,11 @@ class WebApiAccessSampleTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        repository.getContributors(owner: "DroidKaigi", repo: "conference-app-2018") { [weak self] (contributors, error) in
-            guard let self = self else { return }
-            
-            guard let contributors = contributors else {
-                print(error!)
-                return
-            }
-            
-            self.contributors = contributors
-
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(onRefresh(sender:)), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+        
+        showContributors()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,5 +32,28 @@ class WebApiAccessSampleTableViewController: UITableViewController {
         cell.set(contributor: contributors[indexPath.row])
         
         return cell
+    }
+    
+    @objc private func onRefresh(sender: UIRefreshControl) {
+        showContributors()
+        
+        refreshControl!.endRefreshing()
+    }
+    
+    private func showContributors() {
+        repository.getContributors(owner: "DroidKaigi", repo: "conference-app-2018") { [weak self] (contributors, error) in
+            guard let self = self else { return }
+            
+            guard let contributors = contributors else {
+                print(error!)
+                return
+            }
+            
+            self.contributors = contributors
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
