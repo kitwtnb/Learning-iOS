@@ -262,16 +262,16 @@
             </objects>
             <point key="canvasLocation" x="1733.5999999999999" y="2975.615763546798"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Web Api Access Sample Table View Controller-->
         <scene sceneID="Yps-pA-l6u">
             <objects>
-                <tableViewController id="gvl-MA-bm6" sceneMemberID="viewController">
+                <tableViewController id="gvl-MA-bm6" customClass="WebApiAccessSampleTableViewController" customModule="Learning_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tlU-gh-V2e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZXy-4I-7m0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZXy-4I-7m0" customClass="WebApiAccessSampleTableViewCell" customModule="Learning_iOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZXy-4I-7m0" id="YXm-Nl-mJU">

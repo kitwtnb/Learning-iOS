@@ -27,6 +27,8 @@
 		7FAAF87C2174947200089418 /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87B2174947200089418 /* GithubApi.swift */; };
 		7FAAF87E217495CF00089418 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87D217495CF00089418 /* AppError.swift */; };
 		7FAAF88021757D2C00089418 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87F21757D2C00089418 /* GithubRepository.swift */; };
+		7FAAF8822175ABCC00089418 /* WebApiAccessSampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8812175ABCC00089418 /* WebApiAccessSampleTableViewController.swift */; };
+		7FAAF8842175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		7FAAF87B2174947200089418 /* GithubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApi.swift; sourceTree = "<group>"; };
 		7FAAF87D217495CF00089418 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		7FAAF87F21757D2C00089418 /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
+		7FAAF8812175ABCC00089418 /* WebApiAccessSampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewController.swift; sourceTree = "<group>"; };
+		7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 				239DA0592172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift */,
 				23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */,
 				23A3412B217400A5009A0ACB /* ImageViewController.swift */,
+				7FAAF8812175ABCC00089418 /* WebApiAccessSampleTableViewController.swift */,
+				7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */,
 			);
 			path = "Learning-iOS";
 			sourceTree = "<group>";
@@ -312,7 +318,9 @@
 				23096F7D21610AC200560CAF /* AppDelegate.swift in Sources */,
 				239DA0542166D99D00A4E7FD /* NavigationWithParameterSampleViewController.swift in Sources */,
 				7FAAF87A21748C1800089418 /* Contributor.swift in Sources */,
+				7FAAF8822175ABCC00089418 /* WebApiAccessSampleTableViewController.swift in Sources */,
 				7FAAF87E217495CF00089418 /* AppError.swift in Sources */,
+				7FAAF8842175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift in Sources */,
 				23A3412A217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift in Sources */,
 				239DA058216E305A00A4E7FD /* CameraViewController.swift in Sources */,
 				7FAAF88021757D2C00089418 /* GithubRepository.swift in Sources */,
