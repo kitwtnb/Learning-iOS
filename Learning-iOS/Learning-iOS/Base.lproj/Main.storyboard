@@ -313,6 +313,9 @@
                             <outlet property="delegate" destination="gvl-MA-bm6" id="GHs-ql-0wG"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="Cy9-x1-Xrq" kind="show" identifier="Segue" id="pBz-bO-Ple"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQt-BQ-DQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -545,6 +548,21 @@
                 <exit id="5nL-Ez-xp3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4612" y="-10"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="jca-GH-IDb">
+            <objects>
+                <viewController id="Cy9-x1-Xrq" customClass="WebViewController" customModule="Learning_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mX5-5E-d4l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ABY-b7-BXG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EWU-K2-JUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2655" y="3694"/>
         </scene>
     </scenes>
 </document>
