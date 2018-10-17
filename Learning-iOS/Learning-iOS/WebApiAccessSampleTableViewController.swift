@@ -44,7 +44,7 @@ class WebApiAccessSampleTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewController = segue.destination as! WebViewController
-        viewController.url = selectedContributor.reposUrl
+        viewController.url = selectedContributor.htmlUrl
     }
     
     @objc private func onRefresh(sender: UIRefreshControl) {
