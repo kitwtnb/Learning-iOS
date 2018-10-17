@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 
 class CameraRollSampleCollectionViewController: UICollectionViewController {
     var photoAssets: Array = [PHAsset]()
-    var giveAsset: PHAsset? = nil
+    var giveAsset: PHAsset!
 
     override func viewDidLoad() {
         super.viewDidLoad()

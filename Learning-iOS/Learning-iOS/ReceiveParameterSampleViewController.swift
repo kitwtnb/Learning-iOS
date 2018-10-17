@@ -11,7 +11,7 @@ import UIKit
 class ReceiveParameterSampleViewController: UIViewController {
     @IBOutlet weak var receiveText: UILabel!
     
-    var text: String = ""
+    var text: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
