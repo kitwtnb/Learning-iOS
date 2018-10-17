@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol GithubApi {
-    func fetchContributors(owner: String, repo: String, handler: @escaping (Array<Contributor>?, AppError?) -> Void)
+    func fetchContributors(owner: String, repo: String) -> Single<Array<Contributor>>
 }
 
 struct GithubApiImpl : GithubApi {
@@ -21,17 +22,10 @@ struct GithubApiImpl : GithubApi {
         apiClient = client
     }
     
-    func fetchContributors(owner: String, repo: String, handler: @escaping (Array<Contributor>?, AppError?) -> Void) {
+    func fetchContributors(owner: String, repo: String) -> Single<Array<Contributor>> {
         let url = String(format: GithubApiImpl.baseUrl + "/repos/%@/%@/contributors", owner, repo)
         
-        apiClient.get(url: url, queries: nil) { (data, error) in
-            guard let data = data else {
-                handler(nil, error)
-                return
-            }
-            
-            let contributors = try! JSONDecoder().decode([Contributor].self, from: data)
-            handler(contributors, nil)
-        }
+        return apiClient.get(url: url, queries: nil)
+            .map { try! JSONDecoder().decode([Contributor].self, from: $0) }
     }
 }

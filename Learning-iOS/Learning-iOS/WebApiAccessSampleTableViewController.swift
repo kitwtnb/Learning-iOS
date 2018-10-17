@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class WebApiAccessSampleTableViewController: UITableViewController {
     private let repository: GithubRepository = Dependency.resolveGithubRepository()
+    private let disposeBag = DisposeBag()
     
     private var contributors = Array<Contributor>()
     private var selectedContributor: Contributor!
@@ -54,19 +57,14 @@ class WebApiAccessSampleTableViewController: UITableViewController {
     }
     
     private func showContributors() {
-        repository.getContributors(owner: "DroidKaigi", repo: "conference-app-2018") { [weak self] (contributors, error) in
-            guard let self = self else { return }
-            
-            guard let contributors = contributors else {
-                print(error!)
-                return
-            }
-            
-            self.contributors = contributors
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
+        repository.getContributors(owner: "DroidKaigi", repo: "conference-app-2018")
+            .observeOn(MainScheduler.instance)
+            .subscribe(onSuccess: { [weak self] contributors in
+                self?.contributors = contributors
+                self?.tableView.reloadData()
+            }, onError: {
+                print($0)
+            })
+            .disposed(by: disposeBag)
     }
 }
