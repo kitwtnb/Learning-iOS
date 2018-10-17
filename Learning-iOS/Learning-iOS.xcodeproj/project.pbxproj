@@ -32,6 +32,10 @@
 		7FAAF8862175B11200089418 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8852175B11200089418 /* Dependency.swift */; };
 		7FAAF8892175BE8A00089418 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8882175BE8A00089418 /* UIImageViewExtension.swift */; };
 		7FAAF88D2176FAB100089418 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF88C2176FAB100089418 /* WebViewController.swift */; };
+		7FAAF8912177082500089418 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAAF88F2177082400089418 /* RxCocoa.framework */; };
+		7FAAF8922177082500089418 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAAF8902177082500089418 /* RxSwift.framework */; };
+		7FAAF89721770ADA00089418 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FAAF89521770ADA00089418 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FAAF89821770ADA00089418 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FAAF89621770ADA00089418 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,20 @@
 			remoteInfo = "Learning-iOS";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7FAAF89421770AAD00089418 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7FAAF89721770ADA00089418 /* RxSwift.framework in CopyFiles */,
+				7FAAF89821770ADA00089418 /* RxCocoa.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		23096F7921610AC200560CAF /* Learning-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +101,10 @@
 		7FAAF8852175B11200089418 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		7FAAF8882175BE8A00089418 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		7FAAF88C2176FAB100089418 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		7FAAF88F2177082400089418 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		7FAAF8902177082500089418 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		7FAAF89521770ADA00089418 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		7FAAF89621770ADA00089418 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +112,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FAAF8912177082500089418 /* RxCocoa.framework in Frameworks */,
+				7FAAF8922177082500089418 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,10 +137,13 @@
 		23096F7021610AC200560CAF = {
 			isa = PBXGroup;
 			children = (
+				7FAAF89621770ADA00089418 /* RxCocoa.framework */,
+				7FAAF89521770ADA00089418 /* RxSwift.framework */,
 				23096F7B21610AC200560CAF /* Learning-iOS */,
 				23096F9021610AC600560CAF /* Learning-iOSTests */,
 				23096F9B21610AC600560CAF /* Learning-iOSUITests */,
 				23096F7A21610AC200560CAF /* Products */,
+				7FAAF88E2177082400089418 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +222,15 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
+		7FAAF88E2177082400089418 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FAAF88F2177082400089418 /* RxCocoa.framework */,
+				7FAAF8902177082500089418 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,6 +241,7 @@
 				23096F7521610AC200560CAF /* Sources */,
 				23096F7621610AC200560CAF /* Frameworks */,
 				23096F7721610AC200560CAF /* Resources */,
+				7FAAF89421770AAD00089418 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -523,6 +560,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B5JDDMB474;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Learning-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,6 +584,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B5JDDMB474;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Learning-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
