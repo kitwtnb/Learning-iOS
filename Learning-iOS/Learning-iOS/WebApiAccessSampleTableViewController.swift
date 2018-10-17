@@ -12,6 +12,7 @@ class WebApiAccessSampleTableViewController: UITableViewController {
     private let repository: GithubRepository = Dependency.resolveGithubRepository()
     
     private var contributors = Array<Contributor>()
+    private var selectedContributor: Contributor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,18 @@ class WebApiAccessSampleTableViewController: UITableViewController {
         cell.set(contributor: contributors[indexPath.row])
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        selectedContributor = contributors[indexPath.row]
+        performSegue(withIdentifier: "Segue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController = segue.destination as! WebViewController
+        viewController.url = selectedContributor.reposUrl
     }
     
     @objc private func onRefresh(sender: UIRefreshControl) {
