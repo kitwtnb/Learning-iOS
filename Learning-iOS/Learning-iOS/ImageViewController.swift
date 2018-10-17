@@ -12,12 +12,11 @@ import Photos
 class ImageViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
-    var asset: PHAsset? = nil
+    var asset: PHAsset!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let asset = asset else { return }
         let manager = PHImageManager()
         manager.requestImage(for: asset,
                              targetSize: view.frame.size,
