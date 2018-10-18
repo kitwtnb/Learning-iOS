@@ -36,6 +36,7 @@
 		7FAAF8922177082500089418 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAAF8902177082500089418 /* RxSwift.framework */; };
 		7FAAF89721770ADA00089418 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FAAF89521770ADA00089418 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7FAAF89821770ADA00089418 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FAAF89621770ADA00089418 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FAAF89A217818DB00089418 /* WebApiAccessSampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF899217818DB00089418 /* WebApiAccessSampleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		7FAAF8902177082500089418 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		7FAAF89521770ADA00089418 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		7FAAF89621770ADA00089418 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		7FAAF899217818DB00089418 /* WebApiAccessSampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */,
 				7FAAF8852175B11200089418 /* Dependency.swift */,
 				7FAAF88C2176FAB100089418 /* WebViewController.swift */,
+				7FAAF899217818DB00089418 /* WebApiAccessSampleViewModel.swift */,
 			);
 			path = "Learning-iOS";
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				7FAAF8842175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift in Sources */,
 				7FAAF8862175B11200089418 /* Dependency.swift in Sources */,
 				23A3412A217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift in Sources */,
+				7FAAF89A217818DB00089418 /* WebApiAccessSampleViewModel.swift in Sources */,
 				239DA058216E305A00A4E7FD /* CameraViewController.swift in Sources */,
 				7FAAF88021757D2C00089418 /* GithubRepository.swift in Sources */,
 				239DA0562166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift in Sources */,

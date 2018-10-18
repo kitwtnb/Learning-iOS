@@ -11,6 +11,9 @@ import RxSwift
 import RxCocoa
 
 class WebApiAccessSampleTableViewController: UITableViewController {
+    private let viewDidLoadRelay = PublishRelay<Void>()
+    
+    private var viewModel: WebApiAccessSampleViewModel!
     private let repository: GithubRepository = Dependency.resolveGithubRepository()
     private let disposeBag = DisposeBag()
     
@@ -19,12 +22,23 @@ class WebApiAccessSampleTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel = Dependency.resolveWebApiAccessSampleViewModel(input: WebApiAccessSampleViewModelInput(
+            viewDidLoad: viewDidLoadRelay.asObservable()
+        ))
+        viewModel.outputs.contributors.drive(onNext: { [weak self] contributors in
+            self?.contributors = contributors ?? []
+            self?.tableView.reloadData()
+        }).disposed(by: disposeBag)
+        viewModel.outputs.error
+            .emit(onNext: { print($0) })
+            .disposed(by: disposeBag)
 
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(onRefresh(sender:)), for: .valueChanged)
         tableView.refreshControl = refreshControl
         
-        showContributors()
+        viewDidLoadRelay.accept(())
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
