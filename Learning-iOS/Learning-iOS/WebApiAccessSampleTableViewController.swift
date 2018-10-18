@@ -12,6 +12,7 @@ import RxCocoa
 
 class WebApiAccessSampleTableViewController: UITableViewController {
     private let viewDidLoadRelay = PublishRelay<Void>()
+    private let refreshRelay = PublishRelay<Void>()
     
     private var viewModel: WebApiAccessSampleViewModel!
     private let repository: GithubRepository = Dependency.resolveGithubRepository()
@@ -24,12 +25,19 @@ class WebApiAccessSampleTableViewController: UITableViewController {
         super.viewDidLoad()
         
         viewModel = Dependency.resolveWebApiAccessSampleViewModel(input: WebApiAccessSampleViewModelInput(
-            viewDidLoad: viewDidLoadRelay.asObservable()
+            viewDidLoad: viewDidLoadRelay.asObservable(),
+            refresh: refreshRelay.asObservable()
         ))
+        
         viewModel.outputs.contributors.drive(onNext: { [weak self] contributors in
             self?.contributors = contributors ?? []
             self?.tableView.reloadData()
         }).disposed(by: disposeBag)
+
+        viewModel.outputs.finishedRefresh.emit(onNext: { [weak self] _ in
+            self?.refreshControl?.endRefreshing()
+        }).disposed(by: disposeBag)
+        
         viewModel.outputs.error
             .emit(onNext: { print($0) })
             .disposed(by: disposeBag)
@@ -65,20 +73,6 @@ class WebApiAccessSampleTableViewController: UITableViewController {
     }
     
     @objc private func onRefresh(sender: UIRefreshControl) {
-        showContributors()
-        
-        refreshControl!.endRefreshing()
-    }
-    
-    private func showContributors() {
-        repository.getContributors(owner: "DroidKaigi", repo: "conference-app-2018")
-            .observeOn(MainScheduler.instance)
-            .subscribe(onSuccess: { [weak self] contributors in
-                self?.contributors = contributors
-                self?.tableView.reloadData()
-            }, onError: {
-                print($0)
-            })
-            .disposed(by: disposeBag)
+        refreshRelay.accept(())
     }
 }

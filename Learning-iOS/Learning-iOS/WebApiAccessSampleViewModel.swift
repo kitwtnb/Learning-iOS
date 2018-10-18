@@ -12,10 +12,12 @@ import RxCocoa
 
 struct WebApiAccessSampleViewModelInput {
     let viewDidLoad: Observable<Void>
+    let refresh: Observable<Void>
 }
 
 struct WebApiAccessSampleViewModelOutput {
     let contributors: Driver<Array<Contributor>?>
+    let finishedRefresh: Signal<Void>
     let error: Signal<Error>
 }
 
@@ -30,6 +32,7 @@ class WebApiAccessSampleViewModelImpl : WebApiAccessSampleViewModel {
     let repository: GithubRepository
     
     private let contributorsRelay = BehaviorRelay<Array<Contributor>?>(value: nil)
+    private let finishedRefreshRelay = PublishRelay<Void>()
     private let errorRelay = PublishRelay<Error>()
     let outputs: WebApiAccessSampleViewModelOutput
     
@@ -37,18 +40,24 @@ class WebApiAccessSampleViewModelImpl : WebApiAccessSampleViewModel {
         self.repository = repository
         outputs = WebApiAccessSampleViewModelOutput(
             contributors: contributorsRelay.asDriver(),
+            finishedRefresh: finishedRefreshRelay.asSignal(),
             error: errorRelay.asSignal()
         )
         
-        input.viewDidLoad.subscribe({ [weak self] _ in
-            guard let self = self else { return }
-
-            self.repository.getContributors(owner: "DroidKaigi", repo: "conference-app-2018")
-                .subscribe(onSuccess: { [weak self] contributors in
-                    self?.contributorsRelay.accept(contributors)
-                }, onError: { [weak self] error in
-                    self?.errorRelay.accept(error)
-                }).disposed(by: self.disposeBag)
-        }).disposed(by: disposeBag)
+        Observable.merge(input.viewDidLoad, input.refresh)
+            .subscribe({ [weak self] _ in
+                self?.loadContributors()
+            }).disposed(by: disposeBag)
+    }
+    
+    private func loadContributors() {
+        repository.getContributors(owner: "DroidKaigi", repo: "conference-app-2018")
+            .subscribe(onSuccess: { [weak self] contributors in
+                self?.contributorsRelay.accept(contributors)
+                self?.finishedRefreshRelay.accept(())
+            }, onError: { [weak self] error in
+                self?.errorRelay.accept(error)
+                self?.finishedRefreshRelay.accept(())
+            }).disposed(by: self.disposeBag)
     }
 }
