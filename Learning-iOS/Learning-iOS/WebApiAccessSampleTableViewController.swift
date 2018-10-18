@@ -11,8 +11,8 @@ import RxSwift
 import RxCocoa
 
 class WebApiAccessSampleTableViewController: UITableViewController {
+    // for event relay
     private let viewDidLoadRelay = PublishRelay<Void>()
-    private let refreshRelay = PublishRelay<Void>()
     
     private var viewModel: WebApiAccessSampleViewModel!
     private let repository: GithubRepository = Dependency.resolveGithubRepository()
@@ -23,12 +23,16 @@ class WebApiAccessSampleTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        let refreshControl = UIRefreshControl()
+        tableView.refreshControl = refreshControl
+
         viewModel = Dependency.resolveWebApiAccessSampleViewModel(input: WebApiAccessSampleViewModelInput(
             viewDidLoad: viewDidLoadRelay.asObservable(),
-            refresh: refreshRelay.asObservable()
+            refresh: tableView.refreshControl!.rx.controlEvent(.valueChanged).asObservable()
         ))
         
+        // event handling
         viewModel.outputs.contributors.drive(onNext: { [weak self] contributors in
             self?.contributors = contributors ?? []
             self?.tableView.reloadData()
@@ -38,14 +42,11 @@ class WebApiAccessSampleTableViewController: UITableViewController {
             self?.refreshControl?.endRefreshing()
         }).disposed(by: disposeBag)
         
-        viewModel.outputs.error
-            .emit(onNext: { print($0) })
-            .disposed(by: disposeBag)
-
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(onRefresh(sender:)), for: .valueChanged)
-        tableView.refreshControl = refreshControl
+        viewModel.outputs.error.emit(onNext: {
+            print($0)
+        }).disposed(by: disposeBag)
         
+        // call event
         viewDidLoadRelay.accept(())
     }
 
@@ -70,9 +71,5 @@ class WebApiAccessSampleTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewController = segue.destination as! WebViewController
         viewController.url = selectedContributor.htmlUrl
-    }
-    
-    @objc private func onRefresh(sender: UIRefreshControl) {
-        refreshRelay.accept(())
     }
 }
