@@ -37,6 +37,10 @@
 		7FAAF89721770ADA00089418 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FAAF89521770ADA00089418 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7FAAF89821770ADA00089418 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FAAF89621770ADA00089418 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7FAAF89A217818DB00089418 /* WebApiAccessSampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF899217818DB00089418 /* WebApiAccessSampleViewModel.swift */; };
+		7FAAF8A72178692E00089418 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FAAF8A22178692300089418 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FAAF8A82178692E00089418 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAAF8A32178692300089418 /* RealmSwift.framework */; };
+		7FAAF8A92178692E00089418 /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7FAAF8A32178692300089418 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FAAF8AA21797D2000089418 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAAF8A22178692300089418 /* Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +67,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7FAAF8A72178692E00089418 /* Realm.framework in CopyFiles */,
 				7FAAF89721770ADA00089418 /* RxSwift.framework in CopyFiles */,
+				7FAAF8A92178692E00089418 /* RealmSwift.framework in CopyFiles */,
 				7FAAF89821770ADA00089418 /* RxCocoa.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +113,10 @@
 		7FAAF89521770ADA00089418 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		7FAAF89621770ADA00089418 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		7FAAF899217818DB00089418 /* WebApiAccessSampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleViewModel.swift; sourceTree = "<group>"; };
+		7FAAF89E2178690F00089418 /* Realm.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Realm.framework.dSYM; path = Carthage/Build/iOS/Realm.framework.dSYM; sourceTree = "<group>"; };
+		7FAAF89F2178690F00089418 /* RealmSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RealmSwift.framework.dSYM; path = Carthage/Build/iOS/RealmSwift.framework.dSYM; sourceTree = "<group>"; };
+		7FAAF8A22178692300089418 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		7FAAF8A32178692300089418 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FAAF8AA21797D2000089418 /* Realm.framework in Frameworks */,
+				7FAAF8A82178692E00089418 /* RealmSwift.framework in Frameworks */,
 				7FAAF8912177082500089418 /* RxCocoa.framework in Frameworks */,
 				7FAAF8922177082500089418 /* RxSwift.framework in Frameworks */,
 			);
@@ -226,6 +238,10 @@
 		7FAAF88E2177082400089418 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FAAF8A22178692300089418 /* Realm.framework */,
+				7FAAF8A32178692300089418 /* RealmSwift.framework */,
+				7FAAF89E2178690F00089418 /* Realm.framework.dSYM */,
+				7FAAF89F2178690F00089418 /* RealmSwift.framework.dSYM */,
 				7FAAF88F2177082400089418 /* RxCocoa.framework */,
 				7FAAF8902177082500089418 /* RxSwift.framework */,
 			);
