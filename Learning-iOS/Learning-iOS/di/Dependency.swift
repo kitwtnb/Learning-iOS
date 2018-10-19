@@ -20,4 +20,8 @@ struct Dependency {
     static func resolveGithubRepository() -> GithubRepository {
         return GithubRepositoryImpl(api: resolveGithubApi())
     }
+    
+    static func resolveWebApiAccessSampleViewModel(input: WebApiAccessSampleViewModelInput) -> WebApiAccessSampleViewModel {
+        return WebApiAccessSampleViewModelImpl(input: input, repository: resolveGithubRepository())
+    }
 }

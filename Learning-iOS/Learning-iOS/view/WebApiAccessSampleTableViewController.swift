@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class WebApiAccessSampleTableViewController: UITableViewController {
+    // for event relay
+    private let viewDidLoadRelay = PublishRelay<Void>()
+    
+    private var viewModel: WebApiAccessSampleViewModel!
     private let repository: GithubRepository = Dependency.resolveGithubRepository()
+    private let disposeBag = DisposeBag()
     
     private var contributors = Array<Contributor>()
     private var selectedContributor: Contributor!
@@ -18,10 +25,29 @@ class WebApiAccessSampleTableViewController: UITableViewController {
         super.viewDidLoad()
 
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(onRefresh(sender:)), for: .valueChanged)
         tableView.refreshControl = refreshControl
+
+        viewModel = Dependency.resolveWebApiAccessSampleViewModel(input: WebApiAccessSampleViewModelInput(
+            viewDidLoad: viewDidLoadRelay.asObservable(),
+            refresh: tableView.refreshControl!.rx.controlEvent(.valueChanged).asObservable()
+        ))
         
-        showContributors()
+        // event handling
+        viewModel.outputs.contributors.drive(onNext: { [weak self] contributors in
+            self?.contributors = contributors ?? []
+            self?.tableView.reloadData()
+        }).disposed(by: disposeBag)
+
+        viewModel.outputs.finishedRefresh.emit(onNext: { [weak self] _ in
+            self?.refreshControl?.endRefreshing()
+        }).disposed(by: disposeBag)
+        
+        viewModel.outputs.error.emit(onNext: {
+            print($0)
+        }).disposed(by: disposeBag)
+        
+        // call event
+        viewDidLoadRelay.accept(())
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,28 +71,5 @@ class WebApiAccessSampleTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewController = segue.destination as! WebViewController
         viewController.url = selectedContributor.htmlUrl
-    }
-    
-    @objc private func onRefresh(sender: UIRefreshControl) {
-        showContributors()
-        
-        refreshControl!.endRefreshing()
-    }
-    
-    private func showContributors() {
-        repository.getContributors(owner: "DroidKaigi", repo: "conference-app-2018") { [weak self] (contributors, error) in
-            guard let self = self else { return }
-            
-            guard let contributors = contributors else {
-                print(error!)
-                return
-            }
-            
-            self.contributors = contributors
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
     }
 }
