@@ -7,8 +7,21 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct Dependency {
+    static func resolveRealm() -> Realm {
+        return try! Realm()
+    }
+    
+    static func resolveDatabase<T>() -> Database<T> {
+        return Database<T>(realm: resolveRealm())
+    }
+    
+    static func resolveContributorDao() -> ContributorDao {
+        return ContributorDaoImpl(database: resolveDatabase())
+    }
+    
     static func resolveApiClient() -> ApiClient {
         return ApiClientImpl()
     }
@@ -18,7 +31,7 @@ struct Dependency {
     }
 
     static func resolveGithubRepository() -> GithubRepository {
-        return GithubRepositoryImpl(api: resolveGithubApi())
+        return GithubRepositoryImpl(api: resolveGithubApi(), dao: resolveContributorDao())
     }
     
     static func resolveWebApiAccessSampleViewModel(input: WebApiAccessSampleViewModelInput) -> WebApiAccessSampleViewModel {
