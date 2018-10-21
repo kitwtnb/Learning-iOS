@@ -29,13 +29,17 @@ struct GithubRepositoryImpl : GithubRepository{
                 if !contributors.isEmpty {
                     single = Single.just(contributors)
                 } else {
-                    single = self.api.fetchContributors(owner: owner, repo: repo)
-                        .do(onSuccess: { contributors in
-                            _ = self.dao.deleteAll().andThen(self.dao.insert(contributors)).subscribe()
-                        })
+                    single = self.donwloadAndSaveContributors(owner: owner, repo: repo)
                 }
                 
                 return single
+            })
+    }
+    
+    private func donwloadAndSaveContributors(owner: String, repo: String) -> Single<Array<Contributor>> {
+        return api.fetchContributors(owner: owner, repo: repo)
+            .do(onSuccess: { contributors in
+                _ = self.dao.deleteAll().andThen(self.dao.insert(contributors)).subscribe()
             })
     }
 }
