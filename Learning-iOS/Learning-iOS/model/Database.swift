@@ -11,10 +11,8 @@ import RealmSwift
 import RxSwift
 
 class Database<T : Object & Compatible & Uniquable> {
-    private let realm: Realm
-    
-    init(realm: Realm) {
-        self.realm = realm
+    private var realm: Realm {
+        return Dependency.resolveRealm()
     }
     
     func fetchAll() -> Single<Array<T.Value>> {

@@ -15,7 +15,7 @@ struct Dependency {
     }
     
     static func resolveDatabase<T>() -> Database<T> {
-        return Database<T>(realm: resolveRealm())
+        return Database<T>()
     }
     
     static func resolveContributorDao() -> ContributorDao {
