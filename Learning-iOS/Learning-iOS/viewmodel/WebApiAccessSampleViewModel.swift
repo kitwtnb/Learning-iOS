@@ -11,8 +11,8 @@ import RxSwift
 import RxCocoa
 
 struct WebApiAccessSampleViewModelInput {
-    let viewDidLoad: Observable<Void>
-    let refresh: Observable<Void>
+    let viewDidLoad: Driver<Void>
+    let refresh: Signal<Void>
 }
 
 struct WebApiAccessSampleViewModelOutput {
@@ -44,7 +44,7 @@ class WebApiAccessSampleViewModelImpl : WebApiAccessSampleViewModel {
             error: errorRelay.asSignal()
         )
         
-        Observable.merge(input.viewDidLoad, input.refresh)
+        Observable.merge(input.viewDidLoad.asObservable(), input.refresh.asObservable())
             .subscribe({ [weak self] _ in
                 self?.loadContributors()
             }).disposed(by: disposeBag)
