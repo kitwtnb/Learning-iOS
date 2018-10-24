@@ -26,6 +26,10 @@
 		7F5F2B48218035E3002E22A9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B44218035E3002E22A9 /* Realm.framework */; };
 		7F5F2B49218035E3002E22A9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B45218035E3002E22A9 /* RealmSwift.framework */; };
 		7F5F2B4A218035E3002E22A9 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B46218035E3002E22A9 /* RxSwift.framework */; };
+		7F5F2B5021803F31002E22A9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B4C21803F31002E22A9 /* Nimble.framework */; };
+		7F5F2B5121803F31002E22A9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B4D21803F31002E22A9 /* Quick.framework */; };
+		7F5F2B5221803F31002E22A9 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B4E21803F31002E22A9 /* RxTest.framework */; };
+		7F5F2B5321803F31002E22A9 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B4F21803F31002E22A9 /* RxBlocking.framework */; };
 		7FAAF878217471DB00089418 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF877217471DB00089418 /* ApiClient.swift */; };
 		7FAAF87A21748C1800089418 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87921748C1800089418 /* Contributor.swift */; };
 		7FAAF87C2174947200089418 /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87B2174947200089418 /* GithubApi.swift */; };
@@ -87,6 +91,10 @@
 		7F5F2B44218035E3002E22A9 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		7F5F2B45218035E3002E22A9 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		7F5F2B46218035E3002E22A9 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		7F5F2B4C21803F31002E22A9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		7F5F2B4D21803F31002E22A9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		7F5F2B4E21803F31002E22A9 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		7F5F2B4F21803F31002E22A9 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		7FAAF877217471DB00089418 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		7FAAF87921748C1800089418 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		7FAAF87B2174947200089418 /* GithubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApi.swift; sourceTree = "<group>"; };
@@ -121,6 +129,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5F2B5021803F31002E22A9 /* Nimble.framework in Frameworks */,
+				7F5F2B5121803F31002E22A9 /* Quick.framework in Frameworks */,
+				7F5F2B5221803F31002E22A9 /* RxTest.framework in Frameworks */,
+				7F5F2B5321803F31002E22A9 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +239,10 @@
 		7FAAF88E2177082400089418 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F5F2B4C21803F31002E22A9 /* Nimble.framework */,
+				7F5F2B4D21803F31002E22A9 /* Quick.framework */,
+				7F5F2B4F21803F31002E22A9 /* RxBlocking.framework */,
+				7F5F2B4E21803F31002E22A9 /* RxTest.framework */,
 				7F5F2B44218035E3002E22A9 /* Realm.framework */,
 				7F5F2B45218035E3002E22A9 /* RealmSwift.framework */,
 				7F5F2B43218035E3002E22A9 /* RxCocoa.framework */,
@@ -289,6 +305,7 @@
 				23096F8921610AC600560CAF /* Sources */,
 				23096F8A21610AC600560CAF /* Frameworks */,
 				23096F8B21610AC600560CAF /* Resources */,
+				7F5F2B5421803F64002E22A9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -401,6 +418,27 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+		7F5F2B5421803F64002E22A9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -668,6 +706,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B5JDDMB474;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Learning-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -689,6 +731,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B5JDDMB474;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Learning-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
