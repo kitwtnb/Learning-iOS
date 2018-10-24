@@ -30,6 +30,9 @@
 		7F5F2B5121803F31002E22A9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B4D21803F31002E22A9 /* Quick.framework */; };
 		7F5F2B5221803F31002E22A9 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B4E21803F31002E22A9 /* RxTest.framework */; };
 		7F5F2B5321803F31002E22A9 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B4F21803F31002E22A9 /* RxBlocking.framework */; };
+		7F5F2B5721804067002E22A9 /* ApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F2B5621804067002E22A9 /* ApiClientMock.swift */; };
+		7F5F2B5A21804094002E22A9 /* GithubJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F2B5921804094002E22A9 /* GithubJson.swift */; };
+		7F5F2B5C218040D0002E22A9 /* GithubApiSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F2B5B218040D0002E22A9 /* GithubApiSpec.swift */; };
 		7FAAF878217471DB00089418 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF877217471DB00089418 /* ApiClient.swift */; };
 		7FAAF87A21748C1800089418 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87921748C1800089418 /* Contributor.swift */; };
 		7FAAF87C2174947200089418 /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87B2174947200089418 /* GithubApi.swift */; };
@@ -95,6 +98,9 @@
 		7F5F2B4D21803F31002E22A9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		7F5F2B4E21803F31002E22A9 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		7F5F2B4F21803F31002E22A9 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		7F5F2B5621804067002E22A9 /* ApiClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientMock.swift; sourceTree = "<group>"; };
+		7F5F2B5921804094002E22A9 /* GithubJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubJson.swift; sourceTree = "<group>"; };
+		7F5F2B5B218040D0002E22A9 /* GithubApiSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApiSpec.swift; sourceTree = "<group>"; };
 		7FAAF877217471DB00089418 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		7FAAF87921748C1800089418 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		7FAAF87B2174947200089418 /* GithubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApi.swift; sourceTree = "<group>"; };
@@ -196,6 +202,8 @@
 		23096F9021610AC600560CAF /* Learning-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				7F5F2B5821804080002E22A9 /* res */,
+				7F5F2B5521804056002E22A9 /* model */,
 				23096F9121610AC600560CAF /* Learning_iOSTests.swift */,
 				23096F9321610AC600560CAF /* Info.plist */,
 			);
@@ -209,6 +217,23 @@
 				23096F9E21610AC600560CAF /* Info.plist */,
 			);
 			path = "Learning-iOSUITests";
+			sourceTree = "<group>";
+		};
+		7F5F2B5521804056002E22A9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7F5F2B5621804067002E22A9 /* ApiClientMock.swift */,
+				7F5F2B5B218040D0002E22A9 /* GithubApiSpec.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7F5F2B5821804080002E22A9 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				7F5F2B5921804094002E22A9 /* GithubJson.swift */,
+			);
+			path = res;
 			sourceTree = "<group>";
 		};
 		7FAAF876217471C100089418 /* model */ = {
@@ -489,6 +514,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				23096F9221610AC600560CAF /* Learning_iOSTests.swift in Sources */,
+				7F5F2B5A21804094002E22A9 /* GithubJson.swift in Sources */,
+				7F5F2B5C218040D0002E22A9 /* GithubApiSpec.swift in Sources */,
+				7F5F2B5721804067002E22A9 /* ApiClientMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
