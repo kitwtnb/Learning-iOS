@@ -33,6 +33,7 @@
 		7F5F2B5721804067002E22A9 /* ApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F2B5621804067002E22A9 /* ApiClientMock.swift */; };
 		7F5F2B5A21804094002E22A9 /* GithubJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F2B5921804094002E22A9 /* GithubJson.swift */; };
 		7F5F2B5C218040D0002E22A9 /* GithubApiSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F2B5B218040D0002E22A9 /* GithubApiSpec.swift */; };
+		7F5F2B5E218042A3002E22A9 /* GithubRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F2B5D218042A3002E22A9 /* GithubRepositorySpec.swift */; };
 		7F5F2B6121804553002E22A9 /* GithubRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F2B6021804553002E22A9 /* GithubRepositoryMock.swift */; };
 		7F5F2B63218046B0002E22A9 /* ContributorDaoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F2B62218046B0002E22A9 /* ContributorDaoMock.swift */; };
 		7F5F2B65218048ED002E22A9 /* GithubApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F2B64218048ED002E22A9 /* GithubApiMock.swift */; };
@@ -104,6 +105,7 @@
 		7F5F2B5621804067002E22A9 /* ApiClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientMock.swift; sourceTree = "<group>"; };
 		7F5F2B5921804094002E22A9 /* GithubJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubJson.swift; sourceTree = "<group>"; };
 		7F5F2B5B218040D0002E22A9 /* GithubApiSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApiSpec.swift; sourceTree = "<group>"; };
+		7F5F2B5D218042A3002E22A9 /* GithubRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositorySpec.swift; sourceTree = "<group>"; };
 		7F5F2B6021804553002E22A9 /* GithubRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryMock.swift; sourceTree = "<group>"; };
 		7F5F2B62218046B0002E22A9 /* ContributorDaoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorDaoMock.swift; sourceTree = "<group>"; };
 		7F5F2B64218048ED002E22A9 /* GithubApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApiMock.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				7F5F2B5B218040D0002E22A9 /* GithubApiSpec.swift */,
+				7F5F2B5D218042A3002E22A9 /* GithubRepositorySpec.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 			files = (
 				7F5F2B6121804553002E22A9 /* GithubRepositoryMock.swift in Sources */,
 				7F5F2B63218046B0002E22A9 /* ContributorDaoMock.swift in Sources */,
+				7F5F2B5E218042A3002E22A9 /* GithubRepositorySpec.swift in Sources */,
 				23096F9221610AC600560CAF /* Learning_iOSTests.swift in Sources */,
 				7F5F2B5A21804094002E22A9 /* GithubJson.swift in Sources */,
 				7F5F2B65218048ED002E22A9 /* GithubApiMock.swift in Sources */,

@@ -19,7 +19,7 @@ class GithubApiSpec: QuickSpec {
             var mock: ApiClientMock!
             var githubApi: GithubApi!
             
-            beforeSuite {
+            beforeEach {
                 mock = ApiClientMock()
                 mock.returnsData = githubJson.data(using: .utf8)
                 
@@ -31,7 +31,7 @@ class GithubApiSpec: QuickSpec {
                 let repo = "Repo"
                 var contributors: Array<Contributor>!
                 
-                beforeSuite {
+                beforeEach {
                     contributors = try! githubApi.fetchContributors(owner: owner, repo: repo).toBlocking().single()
                 }
                 
