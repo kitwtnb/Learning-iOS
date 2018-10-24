@@ -12,7 +12,7 @@ import RxCocoa
 
 class WebApiAccessSampleTableViewController: UITableViewController {
     // for event relay
-    private let viewDidLoadRelay = PublishRelay<Void>()
+    private let viewDidLoadRelay = BehaviorRelay<Void>(value: ())
     
     private var viewModel: WebApiAccessSampleViewModel!
     private let repository: GithubRepository = Dependency.resolveGithubRepository()
@@ -28,8 +28,8 @@ class WebApiAccessSampleTableViewController: UITableViewController {
         tableView.refreshControl = refreshControl
 
         viewModel = Dependency.resolveWebApiAccessSampleViewModel(input: WebApiAccessSampleViewModelInput(
-            viewDidLoad: viewDidLoadRelay.asObservable(),
-            refresh: tableView.refreshControl!.rx.controlEvent(.valueChanged).asObservable()
+            viewDidLoad: viewDidLoadRelay.asDriver(),
+            refresh: tableView.refreshControl!.rx.controlEvent(.valueChanged).asSignal()
         ))
         
         // event handling
@@ -45,9 +45,6 @@ class WebApiAccessSampleTableViewController: UITableViewController {
         viewModel.outputs.error.emit(onNext: {
             print($0)
         }).disposed(by: disposeBag)
-        
-        // call event
-        viewDidLoadRelay.accept(())
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
