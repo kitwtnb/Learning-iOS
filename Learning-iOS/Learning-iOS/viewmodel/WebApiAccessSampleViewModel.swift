@@ -16,7 +16,7 @@ struct WebApiAccessSampleViewModelInput {
 }
 
 struct WebApiAccessSampleViewModelOutput {
-    let contributors: Driver<Array<Contributor>?>
+    let contributors: Driver<Array<Contributor>>
     let finishedRefresh: Signal<Void>
     let error: Signal<Error>
 }
@@ -31,7 +31,7 @@ class WebApiAccessSampleViewModelImpl : WebApiAccessSampleViewModel {
     let disposeBag = DisposeBag()
     let repository: GithubRepository
     
-    private let contributorsRelay = BehaviorRelay<Array<Contributor>?>(value: nil)
+    private let contributorsRelay = PublishRelay<Array<Contributor>>()
     private let finishedRefreshRelay = PublishRelay<Void>()
     private let errorRelay = PublishRelay<Error>()
     let outputs: WebApiAccessSampleViewModelOutput
@@ -39,7 +39,7 @@ class WebApiAccessSampleViewModelImpl : WebApiAccessSampleViewModel {
     required init(input: WebApiAccessSampleViewModelInput, repository: GithubRepository) {
         self.repository = repository
         outputs = WebApiAccessSampleViewModelOutput(
-            contributors: contributorsRelay.asDriver(),
+            contributors: contributorsRelay.asDriver(onErrorDriveWith: Driver.empty()),
             finishedRefresh: finishedRefreshRelay.asSignal(),
             error: errorRelay.asSignal()
         )
@@ -47,7 +47,8 @@ class WebApiAccessSampleViewModelImpl : WebApiAccessSampleViewModel {
         Observable.merge(input.viewDidLoad.asObservable(), input.refresh.asObservable())
             .subscribe({ [weak self] _ in
                 self?.loadContributors()
-            }).disposed(by: disposeBag)
+            })
+            .disposed(by: disposeBag)
     }
     
     private func loadContributors() {

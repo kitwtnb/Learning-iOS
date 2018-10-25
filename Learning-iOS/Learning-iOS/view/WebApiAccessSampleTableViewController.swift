@@ -18,7 +18,7 @@ class WebApiAccessSampleTableViewController: UITableViewController {
     private let repository: GithubRepository = Dependency.resolveGithubRepository()
     private let disposeBag = DisposeBag()
     
-    private var contributors = Array<Contributor>()
+    private var contributors = [Contributor]()
     private var selectedContributor: Contributor!
     
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class WebApiAccessSampleTableViewController: UITableViewController {
         
         // event handling
         viewModel.outputs.contributors.drive(onNext: { [weak self] contributors in
-            self?.contributors = contributors ?? []
+            self?.contributors = contributors
             self?.tableView.reloadData()
         }).disposed(by: disposeBag)
 
@@ -45,6 +45,8 @@ class WebApiAccessSampleTableViewController: UITableViewController {
         viewModel.outputs.error.emit(onNext: {
             print($0)
         }).disposed(by: disposeBag)
+        
+        viewDidLoadRelay.accept(())
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
