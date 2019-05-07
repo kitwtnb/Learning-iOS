@@ -12,11 +12,17 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
     private let presenter = MainPresenter()
-    private let database: Database<ContributorObject> = Dependency.resolveDatabase()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        presenter.view = self
+    }
+}
+
+extension MainViewController: MainView {
+    func navigateTo(_ identifier: String) {
+        performSegue(withIdentifier: identifier, sender: nil)
     }
 }
 
@@ -36,6 +42,6 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: presenter.segues[indexPath.row], sender: nil)
+        presenter.didSelectRowAt(indexPath.row)
     }
 }

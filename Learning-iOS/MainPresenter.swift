@@ -4,6 +4,7 @@
 //
 
 class MainPresenter {
+    weak var view: MainView? = nil
     let segues = [
         "Scene change",
         "Counter",
@@ -12,4 +13,8 @@ class MainPresenter {
         "Camera roll",
         "Web API access"
     ]
+
+    func didSelectRowAt(_ index: Int) {
+        view?.navigateTo(segues[index])
+    }
 }
