@@ -42,23 +42,23 @@
 		7FAAF87C2174947200089418 /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87B2174947200089418 /* GithubApi.swift */; };
 		7FAAF87E217495CF00089418 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87D217495CF00089418 /* AppError.swift */; };
 		7FAAF88021757D2C00089418 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF87F21757D2C00089418 /* GithubRepository.swift */; };
-		7FAAF8822175ABCC00089418 /* WebApiAccessSampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8812175ABCC00089418 /* WebApiAccessSampleTableViewController.swift */; };
-		7FAAF8842175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */; };
 		7FAAF8862175B11200089418 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8852175B11200089418 /* Dependency.swift */; };
 		7FAAF8892175BE8A00089418 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8882175BE8A00089418 /* UIImageViewExtension.swift */; };
-		7FAAF88D2176FAB100089418 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF88C2176FAB100089418 /* WebViewController.swift */; };
 		7FAAF89A217818DB00089418 /* WebApiAccessSampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF899217818DB00089418 /* WebApiAccessSampleViewModel.swift */; };
 		7FAAF8AC21799C4800089418 /* ContributorObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8AB21799C4800089418 /* ContributorObject.swift */; };
 		7FAAF8AE2179AE7500089418 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8AD2179AE7500089418 /* Database.swift */; };
 		7FAAF8B02179B07F00089418 /* Compatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8AF2179B07F00089418 /* Compatible.swift */; };
 		7FAAF8B22179BF6200089418 /* ContributorDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8B12179BF6200089418 /* ContributorDao.swift */; };
 		7FAAF8B42179D6D800089418 /* Uniquable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8B32179D6D800089418 /* Uniquable.swift */; };
+		C6FA11F727EE21DF5CEBF9D7 /* WebApiAccessSampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA16409EE366B0551F702D /* WebApiAccessSampleTableViewController.swift */; };
 		C6FA14BB0497787C52661C61 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA1AC04A13AD8F89A0CCB4 /* MainPresenter.swift */; };
 		C6FA14C604E95544D232884B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA149344A39DEF8C1C64CF /* MainView.swift */; };
 		C6FA14D10413DF8BE9BDA422 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA149344A39DEF8C1C64CF /* MainView.swift */; };
+		C6FA15E05A8A6155857F026C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA199E32611604733BD98F /* WebViewController.swift */; };
 		C6FA1706686DBA79C4451E03 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA149344A39DEF8C1C64CF /* MainView.swift */; };
 		C6FA17E3F2A3E8908390EDF5 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA1AC04A13AD8F89A0CCB4 /* MainPresenter.swift */; };
 		C6FA1B440004F78CB3CC9F56 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA1AC04A13AD8F89A0CCB4 /* MainPresenter.swift */; };
+		C6FA1F036072E59DD6FA34D9 /* WebApiAccessSampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA17380311B873BEDE3475 /* WebApiAccessSampleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,11 +120,8 @@
 		7FAAF87B2174947200089418 /* GithubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApi.swift; sourceTree = "<group>"; };
 		7FAAF87D217495CF00089418 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		7FAAF87F21757D2C00089418 /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
-		7FAAF8812175ABCC00089418 /* WebApiAccessSampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewController.swift; sourceTree = "<group>"; };
-		7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewCell.swift; sourceTree = "<group>"; };
 		7FAAF8852175B11200089418 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		7FAAF8882175BE8A00089418 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
-		7FAAF88C2176FAB100089418 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7FAAF899217818DB00089418 /* WebApiAccessSampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleViewModel.swift; sourceTree = "<group>"; };
 		7FAAF8AB21799C4800089418 /* ContributorObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorObject.swift; sourceTree = "<group>"; };
 		7FAAF8AD2179AE7500089418 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -132,6 +129,9 @@
 		7FAAF8B12179BF6200089418 /* ContributorDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorDao.swift; sourceTree = "<group>"; };
 		7FAAF8B32179D6D800089418 /* Uniquable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uniquable.swift; sourceTree = "<group>"; };
 		C6FA149344A39DEF8C1C64CF /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C6FA16409EE366B0551F702D /* WebApiAccessSampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewController.swift; sourceTree = "<group>"; };
+		C6FA17380311B873BEDE3475 /* WebApiAccessSampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewCell.swift; sourceTree = "<group>"; };
+		C6FA199E32611604733BD98F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C6FA1AC04A13AD8F89A0CCB4 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,21 +198,10 @@
 				7FAAF89B217851EC00089418 /* viewmodel */,
 				7FAAF876217471C100089418 /* model */,
 				23096F7C21610AC200560CAF /* AppDelegate.swift */,
-				23096F7E21610AC200560CAF /* MainViewController.swift */,
 				23096F8021610AC200560CAF /* Main.storyboard */,
 				23096F8321610AC600560CAF /* Assets.xcassets */,
 				23096F8521610AC600560CAF /* LaunchScreen.storyboard */,
 				23096F8821610AC600560CAF /* Info.plist */,
-				23096FAC21625D1A00560CAF /* SceneChangeSampleViewController.swift */,
-				239DA0512164F45600A4E7FD /* CounterSampleViewController.swift */,
-				239DA0532166D99D00A4E7FD /* NavigationWithParameterSampleViewController.swift */,
-				239DA0552166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift */,
-				239DA057216E305A00A4E7FD /* CameraViewController.swift */,
-				239DA0592172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift */,
-				23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */,
-				23A3412B217400A5009A0ACB /* ImageViewController.swift */,
-				C6FA1AC04A13AD8F89A0CCB4 /* MainPresenter.swift */,
-				C6FA149344A39DEF8C1C64CF /* MainView.swift */,
 			);
 			path = "Learning-iOS";
 			sourceTree = "<group>";
@@ -274,6 +263,67 @@
 			path = viewmodel;
 			sourceTree = "<group>";
 		};
+		7F97F3A322828038005FDD1A /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				C6FA199E32611604733BD98F /* WebViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		7F97F3A422828056005FDD1A /* SceneChangeSapmle */ = {
+			isa = PBXGroup;
+			children = (
+				23096FAC21625D1A00560CAF /* SceneChangeSampleViewController.swift */,
+			);
+			path = SceneChangeSapmle;
+			sourceTree = "<group>";
+		};
+		7F97F3A52282806F005FDD1A /* NavigationWithParameter */ = {
+			isa = PBXGroup;
+			children = (
+				239DA0552166DA1600A4E7FD /* ReceiveParameterSampleViewController.swift */,
+				239DA0532166D99D00A4E7FD /* NavigationWithParameterSampleViewController.swift */,
+			);
+			path = NavigationWithParameter;
+			sourceTree = "<group>";
+		};
+		7F97F3A62282807F005FDD1A /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				239DA057216E305A00A4E7FD /* CameraViewController.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		7F97F3A72282808B005FDD1A /* CameraRoll */ = {
+			isa = PBXGroup;
+			children = (
+				23A3412B217400A5009A0ACB /* ImageViewController.swift */,
+				239DA0592172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift */,
+				23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */,
+			);
+			path = CameraRoll;
+			sourceTree = "<group>";
+		};
+		7F97F3A82282809A005FDD1A /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				239DA0512164F45600A4E7FD /* CounterSampleViewController.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		7F97F3A9228280CE005FDD1A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				23096F7E21610AC200560CAF /* MainViewController.swift */,
+				C6FA1AC04A13AD8F89A0CCB4 /* MainPresenter.swift */,
+				C6FA149344A39DEF8C1C64CF /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		7FAAF876217471C100089418 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,9 +375,14 @@
 		7FAAF89C2178520300089418 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				7FAAF8812175ABCC00089418 /* WebApiAccessSampleTableViewController.swift */,
-				7FAAF8832175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift */,
-				7FAAF88C2176FAB100089418 /* WebViewController.swift */,
+				7F97F3A9228280CE005FDD1A /* Main */,
+				7F97F3A82282809A005FDD1A /* Counter */,
+				7F97F3A62282807F005FDD1A /* Camera */,
+				7F97F3A72282808B005FDD1A /* CameraRoll */,
+				7F97F3A52282806F005FDD1A /* NavigationWithParameter */,
+				7F97F3A422828056005FDD1A /* SceneChangeSapmle */,
+				7F97F3A322828038005FDD1A /* WebView */,
+				C6FA1602455582C12F3A4B00 /* WebApiAccessSample */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -338,6 +393,15 @@
 				7FAAF8852175B11200089418 /* Dependency.swift */,
 			);
 			path = di;
+			sourceTree = "<group>";
+		};
+		C6FA1602455582C12F3A4B00 /* WebApiAccessSample */ = {
+			isa = PBXGroup;
+			children = (
+				C6FA17380311B873BEDE3475 /* WebApiAccessSampleTableViewCell.swift */,
+				C6FA16409EE366B0551F702D /* WebApiAccessSampleTableViewController.swift */,
+			);
+			path = WebApiAccessSample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,7 +585,6 @@
 				7FAAF878217471DB00089418 /* ApiClient.swift in Sources */,
 				239DA05A2172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift in Sources */,
 				23096F7F21610AC200560CAF /* MainViewController.swift in Sources */,
-				7FAAF88D2176FAB100089418 /* WebViewController.swift in Sources */,
 				7FAAF8892175BE8A00089418 /* UIImageViewExtension.swift in Sources */,
 				7FAAF8B02179B07F00089418 /* Compatible.swift in Sources */,
 				23A3412C217400A5009A0ACB /* ImageViewController.swift in Sources */,
@@ -533,9 +596,7 @@
 				239DA0542166D99D00A4E7FD /* NavigationWithParameterSampleViewController.swift in Sources */,
 				7FAAF87A21748C1800089418 /* Contributor.swift in Sources */,
 				7FAAF8B22179BF6200089418 /* ContributorDao.swift in Sources */,
-				7FAAF8822175ABCC00089418 /* WebApiAccessSampleTableViewController.swift in Sources */,
 				7FAAF87E217495CF00089418 /* AppError.swift in Sources */,
-				7FAAF8842175ABEE00089418 /* WebApiAccessSampleTableViewCell.swift in Sources */,
 				7FAAF8862175B11200089418 /* Dependency.swift in Sources */,
 				23A3412A217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift in Sources */,
 				7FAAF89A217818DB00089418 /* WebApiAccessSampleViewModel.swift in Sources */,
@@ -546,6 +607,9 @@
 				7FAAF8AE2179AE7500089418 /* Database.swift in Sources */,
 				C6FA1B440004F78CB3CC9F56 /* MainPresenter.swift in Sources */,
 				C6FA1706686DBA79C4451E03 /* MainView.swift in Sources */,
+				C6FA15E05A8A6155857F026C /* WebViewController.swift in Sources */,
+				C6FA1F036072E59DD6FA34D9 /* WebApiAccessSampleTableViewCell.swift in Sources */,
+				C6FA11F727EE21DF5CEBF9D7 /* WebApiAccessSampleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
