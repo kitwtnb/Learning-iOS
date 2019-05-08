@@ -54,6 +54,7 @@
                         <segue destination="vUw-um-Wpt" kind="show" identifier="Camera" id="plV-JK-eWQ"/>
                         <segue destination="yjn-Rv-urD" kind="show" identifier="Camera roll" id="M4X-Qx-R6C"/>
                         <segue destination="gvl-MA-bm6" kind="show" identifier="Web API access" id="ttw-DX-dyi"/>
+                        <segue destination="zqd-Gk-Xnb" kind="show" identifier="Realm sample" id="T9m-yA-QQ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -296,6 +297,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQt-BQ-DQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1733.5999999999999" y="3693.8423645320199"/>
+        </scene>
+        <!--Realm Sample View Controller-->
+        <scene sceneID="Amh-xB-b66">
+            <objects>
+                <viewController id="zqd-Gk-Xnb" customClass="RealmSampleViewController" customModule="Learning_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IdA-0M-vN5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QQL-dK-t4w"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shs-us-mhF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="4420"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="41Q-79-t0M">
