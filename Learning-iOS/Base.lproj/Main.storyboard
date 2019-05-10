@@ -318,6 +318,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frx-At-mk1">
                                         <rect key="frame" x="321" y="7" width="34" height="30"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="onTappedSave:" destination="zqd-Gk-Xnb" eventType="touchUpInside" id="Ba2-zz-Rux"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -355,6 +358,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QQL-dK-t4w"/>
                     </view>
+                    <connections>
+                        <outlet property="inputText" destination="uyd-ae-ZIQ" id="IZ0-Wt-4SI"/>
+                        <outlet property="tableView" destination="1UA-dN-gbp" id="KVJ-jn-PSq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shs-us-mhF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
