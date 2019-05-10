@@ -28,3 +28,13 @@ class RealmSampleViewController: UIViewController {
     */
 
 }
+
+extension RealmSampleViewController: UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    }
+}
