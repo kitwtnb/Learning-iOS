@@ -11,7 +11,8 @@ class MainPresenter {
         "Navigation with parameter",
         "Camera",
         "Camera roll",
-        "Web API access"
+        "Web API access",
+        "Realm sample"
     ]
 
     func didSelectRowAt(_ index: Int) {

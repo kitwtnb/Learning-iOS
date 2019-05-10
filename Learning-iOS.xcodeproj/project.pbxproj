@@ -50,6 +50,9 @@
 		7FAAF8B02179B07F00089418 /* Compatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8AF2179B07F00089418 /* Compatible.swift */; };
 		7FAAF8B22179BF6200089418 /* ContributorDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8B12179BF6200089418 /* ContributorDao.swift */; };
 		7FAAF8B42179D6D800089418 /* Uniquable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAF8B32179D6D800089418 /* Uniquable.swift */; };
+		7FF295E32282D5B400FEF872 /* RealmSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF295E22282D5B400FEF872 /* RealmSampleViewController.swift */; };
+		7FF295E42282D5B400FEF872 /* RealmSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF295E22282D5B400FEF872 /* RealmSampleViewController.swift */; };
+		7FF295E52282D5B400FEF872 /* RealmSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF295E22282D5B400FEF872 /* RealmSampleViewController.swift */; };
 		C6FA11F727EE21DF5CEBF9D7 /* WebApiAccessSampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA16409EE366B0551F702D /* WebApiAccessSampleTableViewController.swift */; };
 		C6FA14BB0497787C52661C61 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA1AC04A13AD8F89A0CCB4 /* MainPresenter.swift */; };
 		C6FA14C604E95544D232884B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FA149344A39DEF8C1C64CF /* MainView.swift */; };
@@ -128,6 +131,7 @@
 		7FAAF8AF2179B07F00089418 /* Compatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compatible.swift; sourceTree = "<group>"; };
 		7FAAF8B12179BF6200089418 /* ContributorDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorDao.swift; sourceTree = "<group>"; };
 		7FAAF8B32179D6D800089418 /* Uniquable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uniquable.swift; sourceTree = "<group>"; };
+		7FF295E22282D5B400FEF872 /* RealmSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSampleViewController.swift; sourceTree = "<group>"; };
 		C6FA149344A39DEF8C1C64CF /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C6FA16409EE366B0551F702D /* WebApiAccessSampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewController.swift; sourceTree = "<group>"; };
 		C6FA17380311B873BEDE3475 /* WebApiAccessSampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiAccessSampleTableViewCell.swift; sourceTree = "<group>"; };
@@ -383,6 +387,7 @@
 				7F97F3A422828056005FDD1A /* SceneChangeSapmle */,
 				7F97F3A322828038005FDD1A /* WebView */,
 				C6FA1602455582C12F3A4B00 /* WebApiAccessSample */,
+				7FF295E12282D56800FEF872 /* RealmSample */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -393,6 +398,14 @@
 				7FAAF8852175B11200089418 /* Dependency.swift */,
 			);
 			path = di;
+			sourceTree = "<group>";
+		};
+		7FF295E12282D56800FEF872 /* RealmSample */ = {
+			isa = PBXGroup;
+			children = (
+				7FF295E22282D5B400FEF872 /* RealmSampleViewController.swift */,
+			);
+			path = RealmSample;
 			sourceTree = "<group>";
 		};
 		C6FA1602455582C12F3A4B00 /* WebApiAccessSample */ = {
@@ -597,6 +610,7 @@
 				7FAAF87A21748C1800089418 /* Contributor.swift in Sources */,
 				7FAAF8B22179BF6200089418 /* ContributorDao.swift in Sources */,
 				7FAAF87E217495CF00089418 /* AppError.swift in Sources */,
+				7FF295E32282D5B400FEF872 /* RealmSampleViewController.swift in Sources */,
 				7FAAF8862175B11200089418 /* Dependency.swift in Sources */,
 				23A3412A217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift in Sources */,
 				7FAAF89A217818DB00089418 /* WebApiAccessSampleViewModel.swift in Sources */,
@@ -621,6 +635,7 @@
 				7F5F2B63218046B0002E22A9 /* ContributorDaoMock.swift in Sources */,
 				7F5F2B5E218042A3002E22A9 /* GithubRepositorySpec.swift in Sources */,
 				7F5F2B5A21804094002E22A9 /* GithubJson.swift in Sources */,
+				7FF295E42282D5B400FEF872 /* RealmSampleViewController.swift in Sources */,
 				7F5F2B69218057D7002E22A9 /* WebApiAccessSampleViewModelSpec.swift in Sources */,
 				7F5F2B65218048ED002E22A9 /* GithubApiMock.swift in Sources */,
 				7F5F2B5C218040D0002E22A9 /* GithubApiSpec.swift in Sources */,
@@ -634,6 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FF295E52282D5B400FEF872 /* RealmSampleViewController.swift in Sources */,
 				23096F9D21610AC600560CAF /* Learning_iOSUITests.swift in Sources */,
 				C6FA17E3F2A3E8908390EDF5 /* MainPresenter.swift in Sources */,
 				C6FA14C604E95544D232884B /* MainView.swift in Sources */,
