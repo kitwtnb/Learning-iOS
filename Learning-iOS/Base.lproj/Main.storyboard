@@ -55,6 +55,7 @@
                         <segue destination="yjn-Rv-urD" kind="show" identifier="Camera roll" id="M4X-Qx-R6C"/>
                         <segue destination="gvl-MA-bm6" kind="show" identifier="Web API access" id="ttw-DX-dyi"/>
                         <segue destination="zqd-Gk-Xnb" kind="show" identifier="Realm sample" id="T9m-yA-QQ3"/>
+                        <segue destination="AIk-1i-ka6" kind="show" identifier="View and Layer" id="7vI-sr-JIf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -366,6 +367,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shs-us-mhF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1730.4000000000001" y="4417.2413793103451"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="liJ-jv-klJ">
+            <objects>
+                <viewController id="AIk-1i-ka6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dbD-Lt-Hi9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eec-we-tnl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x98-7F-Y0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730" y="5128"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="41Q-79-t0M">
