@@ -21,6 +21,7 @@
 		239DA05A2172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DA0592172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift */; };
 		23A3412A217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */; };
 		23A3412C217400A5009A0ACB /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3412B217400A5009A0ACB /* ImageViewController.swift */; };
+		61354716467EADB1654BBB49 /* ViewAndLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6135490956E66831322FE672 /* ViewAndLayerViewController.swift */; };
 		7F5F2B47218035E3002E22A9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B43218035E3002E22A9 /* RxCocoa.framework */; };
 		7F5F2B48218035E3002E22A9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B44218035E3002E22A9 /* Realm.framework */; };
 		7F5F2B49218035E3002E22A9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5F2B45218035E3002E22A9 /* RealmSwift.framework */; };
@@ -102,6 +103,7 @@
 		239DA0592172F38B00A4E7FD /* CameraRollSampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRollSampleCollectionViewController.swift; sourceTree = "<group>"; };
 		23A34129217308A4009A0ACB /* CameraRollSampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRollSampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		23A3412B217400A5009A0ACB /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		6135490956E66831322FE672 /* ViewAndLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAndLayerViewController.swift; sourceTree = "<group>"; };
 		7F5F2B43218035E3002E22A9 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		7F5F2B44218035E3002E22A9 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		7F5F2B45218035E3002E22A9 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
@@ -229,6 +231,13 @@
 				23096F9E21610AC600560CAF /* Info.plist */,
 			);
 			path = "Learning-iOSUITests";
+			sourceTree = "<group>";
+		};
+		61354F4AAFF8F3915912920F /* ViewAndLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewAndLayer;
 			sourceTree = "<group>";
 		};
 		7F5F2B5521804056002E22A9 /* model */ = {
@@ -388,6 +397,7 @@
 				7F97F3A322828038005FDD1A /* WebView */,
 				C6FA1602455582C12F3A4B00 /* WebApiAccessSample */,
 				7FF295E12282D56800FEF872 /* RealmSample */,
+				61354F4AAFF8F3915912920F /* ViewAndLayer */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -413,6 +423,7 @@
 			children = (
 				C6FA17380311B873BEDE3475 /* WebApiAccessSampleTableViewCell.swift */,
 				C6FA16409EE366B0551F702D /* WebApiAccessSampleTableViewController.swift */,
+				6135490956E66831322FE672 /* ViewAndLayerViewController.swift */,
 			);
 			path = WebApiAccessSample;
 			sourceTree = "<group>";
@@ -624,6 +635,7 @@
 				C6FA15E05A8A6155857F026C /* WebViewController.swift in Sources */,
 				C6FA1F036072E59DD6FA34D9 /* WebApiAccessSampleTableViewCell.swift in Sources */,
 				C6FA11F727EE21DF5CEBF9D7 /* WebApiAccessSampleTableViewController.swift in Sources */,
+				61354716467EADB1654BBB49 /* ViewAndLayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

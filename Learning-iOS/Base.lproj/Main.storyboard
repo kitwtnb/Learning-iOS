@@ -368,10 +368,10 @@
             </objects>
             <point key="canvasLocation" x="1730.4000000000001" y="4417.2413793103451"/>
         </scene>
-        <!--View Controller-->
+        <!--View And Layer View Controller-->
         <scene sceneID="liJ-jv-klJ">
             <objects>
-                <viewController id="AIk-1i-ka6" sceneMemberID="viewController">
+                <viewController id="AIk-1i-ka6" customClass="ViewAndLayerViewController" customModule="Learning_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dbD-Lt-Hi9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
